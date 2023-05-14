@@ -84,15 +84,18 @@
 				<h2 id="2ndTitle">sur l’île de Ré</h2>
 				<br><br>
 				<!-- Video -->
-				<!-- <iframe src="https://www.youtube-nocookie.com/embed/wgvI2Sd1JxI" id="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-				<video controls>
+				<iframe src="https://www.youtube-nocookie.com/embed/wgvI2Sd1JxI" id="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<!-- <video controls>
 					<source src="https://drive.google.com/uc?export=download&id=1ZRNk7M6l-FcwK_fye_748EklayO_32Np" type="video/mp4">
 					Votre navigateur ne prend pas en charge la balise vidéo.
-				</video>
+				</video> -->
 				<br><br>
 				<!-- Terrain -->
 				<h2>Le terrain de camping</h2>
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1369.175243855255!2d-1.5281328295645074!3d46.248040077984946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sde!2sde!4v1683883333068!5m2!1sde!2sde" id="gmaps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1369.175243855255!2d-1.5281328295645074!3d46.248040077984946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sde!2sde!4v1683883333068!5m2!1sde!2sde" id="gmaps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+				<a href="https://www.google.com/maps/@46.24804,-1.528133,385m/data=!3m1!1e3" target="_blank">In Google Maps anzeigen</a>
+				<img src="/lefou/src/media/plan.jpg" id="plan">
+				<div class="text-white" id="tooltip">Tooltip</div>
 				<br><br>
 				<!-- Région -->
 				<h2>La région</h2>
@@ -288,6 +291,7 @@
 	<script>
 		window.addEventListener("load", function () {
 			applyColorMode();
+			planTooltip();
 		});
 	</script>
 </body>

@@ -44,8 +44,9 @@ h2 {
 	margin-bottom: 20px;
 }
 
-video {
+#video {
 	width: 100%;
+	aspect-ratio: 16 / 9;
 }
 
 #gmaps {

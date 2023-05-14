@@ -71,3 +71,23 @@ $('.collapse').each(function() {
 		this.scrollIntoView();
 	});
 });
+
+function planTooltip() {
+	const plan = document.querySelector('#plan');
+	const tooltip = document.querySelector('#tooltip');
+	
+	plan.addEventListener('mouseover', () => {
+		tooltip.style.display = 'block';
+	});
+	plan.addEventListener('mouseout', () => {
+		tooltip.style.display = 'none';
+	});
+
+	plan.addEventListener('mousemove', (e) => {
+		console.log(e.pageY);
+		Object.assign(tooltip.style, {
+			left: `${e.pageX}px`,
+			top: `${e.pageY - tooltip.offsetHeight - 10}px`,
+		});
+	});
+}

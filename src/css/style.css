@@ -44,21 +44,25 @@ h2 {
 	margin-bottom: 20px;
 }
 
-video {
+video, #plan {
 	width: 100%;
 }
 
-/*
 #video {
 	width: 100%;
 	aspect-ratio: 16 / 9;
 }
-*/
 
 #gmaps {
 	width: 100%;
-	height: 25%;
+	height: 20%;
 }
+
+#tooltip {
+	position: absolute;
+  display: none;
+}
+
 
 .carousel-item {
 	text-align: center;

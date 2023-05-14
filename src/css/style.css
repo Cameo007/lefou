@@ -1,0 +1,85 @@
+@font-face {
+	font-family: Brizeux-Normal;
+	src: url("/lefou/src/fonts/brizeux_normal.ttf");
+	font-display: swap;
+}
+
+body {
+	font-family: Brizeux-Normal;
+	scroll-behavior: smooth;
+}
+
+.marginTop {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navbar, footer {
+	background-color: #3EB489;
+	color: white;
+}
+footer a {
+	color: white;
+}
+
+#foot {
+	position: fixed;
+	height: auto;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 2;
+}
+
+.dropdown-item.colorMode {
+	text-align: center;
+}
+
+
+video {
+	width: 100%;
+}
+
+h1 {
+	text-align: center;
+	font-size: 600%;
+}
+h2 {
+	text-align: center;
+}
+
+#h-about {
+	padding-bottom: 20px;
+}
+
+.hoverImage:hover {
+	transform: scale(1.2);
+}
+figure { 
+    display: inline-block;
+}
+figcaption {
+	text-align: center;
+}
+#figure-leon {
+	margin-left: 15%;
+}
+#figure-pascal {
+	float: right;
+}
+
+.collapse-faq, .collapse-sources {
+	margin-top: 20px;
+}
+
+button.faq {
+	margin: 5px;
+}
+
+.carousel-item {
+	text-align: center;
+}
+
+#div-button-showSources {
+	text-align: center;
+}

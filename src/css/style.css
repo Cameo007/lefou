@@ -1,6 +1,6 @@
 @font-face {
 	font-family: Brizeux-Normal;
-	src: url("/lefou/src/fonts/brizeux_normal.ttf");
+	src: url("/src/fonts/brizeux_normal.ttf");
 	font-display: swap;
 }
 
@@ -58,9 +58,8 @@ video, #plan {
 	height: 20%;
 }
 
-#tooltip {
+.tooltip-button {
 	position: absolute;
-  display: none;
 }
 
 

@@ -73,21 +73,20 @@ $('.collapse').each(function() {
 });
 
 function planTooltip() {
-	const plan = document.querySelector('#plan');
-	const tooltip = document.querySelector('#tooltip');
-	
-	plan.addEventListener('mouseover', () => {
-		tooltip.style.display = 'block';
-	});
-	plan.addEventListener('mouseout', () => {
-		tooltip.style.display = 'none';
-	});
+	const plan = $("#plan");
+	const tooltip = $("#tooltip");
+	const scaleWidth = 1558 / plan.width();
+	const scaleHeight = 936 / plan.height();
+	console.log(scaleWidth);
 
-	plan.addEventListener('mousemove', (e) => {
-		console.log(e.pageY);
-		Object.assign(tooltip.style, {
-			left: `${e.pageX}px`,
-			top: `${e.pageY - tooltip.offsetHeight - 10}px`,
-		});
+	const points = [
+		{"x": 250, "y": 400, "title": "Parkplatz", "color": "white"},
+		{"x": 250, "y": 340, "title": "Pott", "color": "black"},
+		{"x": 560, "y": 430, "title": "Pool", "color": "white"}
+	];
+
+	$.each(points, function(index, point) {
+		console.log(point["x"] / scaleWidth);
+		$("#tooltips").append(`<i class="bi bi-geo-alt-fill tooltip-button text-${point["color"]}" style="left: ${plan.offset()["left"] + point["x"] / scaleHeight}px;top: ${plan.offset()["top"] + point["y"] / scaleWidth}px;font-size: 1.7em;" data-bs-toggle="tooltip" data-bs-title="${point["title"]}"></i>`)
 	});
 }

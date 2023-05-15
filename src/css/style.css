@@ -62,7 +62,12 @@ video, #plan {
 	position: absolute;
 }
 
-
+[data-bs-theme=dark] .carousel .carousel-indicators [data-bs-target], [data-bs-theme=dark].carousel .carousel-indicators [data-bs-target] {
+    background-color: #fff;
+}
+[data-bs-theme=dark] .carousel .carousel-control-next-icon, [data-bs-theme=dark] .carousel .carousel-control-prev-icon, [data-bs-theme=dark].carousel .carousel-control-next-icon, [data-bs-theme=dark].carousel .carousel-control-prev-icon {
+    filter: invert(0) grayscale(100);
+}
 .carousel-item {
 	text-align: center;
 }
@@ -76,6 +81,9 @@ video, #plan {
 .about-image {
 	width: 200px;
 }
+.about-image, ::after, ::before
+    box-sizing: initial;
+}
 figure { 
     display: inline-block;
 	margin: 15px;
@@ -83,7 +91,7 @@ figure {
 figcaption {
 	text-align: center;
 }
-@media only screen and (max-width: 501px) {
+@media only screen and (max-width: 524px) {
 	#image-julian {
 		text-align: center;
 	}
@@ -94,7 +102,7 @@ figcaption {
 		text-align: center;
 	}
 }
-@media only screen and (max-width: 1199px) and (min-width: 502px) {
+@media only screen and (max-width: 1399px) and (min-width: 525px) {
 	#figure-leon {
 		float: right;
 	}
@@ -102,7 +110,7 @@ figcaption {
 		text-align: center;
 	}
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
 	#figure-julian {
 		float: left;
 	}

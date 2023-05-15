@@ -1,14 +1,14 @@
 function validateForm() {
-	'use strict'
-	const forms = document.querySelectorAll('.requires-validation')
+	"use strict"
+	const forms = document.querySelectorAll(".requires-validation")
 	Array.from(forms).forEach(function(form) {
-		form.addEventListener('submit', function(event) {
+		form.addEventListener("submit", function(event) {
 			if (!form.checkValidity()) {
 				event.preventDefault()
 				event.stopPropagation()
 			}
 				
-			form.classList.add('was-validated')
+			form.classList.add("was-validated")
 		}, false)
 	});
 }
@@ -52,7 +52,7 @@ function applyColorMode() {
 	$(".carousel").attr("data-bs-theme", "light");
 	
 	//Change images if needed
-	$('img.colorModeImage').each(function() {
+	$("img.colorModeImage").each(function() {
 		if (colorMode == "light") {
 			$(this).attr("src", $(this).attr("src").replace("dark", "light"));
 		} else {
@@ -66,8 +66,8 @@ function changeColorMode(colorMode) {
 }
 
 //Scrolling
-$('.collapse').each(function() {
-	$(this).on('shown.bs.collapse', function () {
+$(".collapse").each(function() {
+	$(this).on("shown.bs.collapse", function () {
 		this.scrollIntoView();
 	});
 });
@@ -77,16 +77,15 @@ function planTooltip() {
 	const tooltip = $("#tooltip");
 	const scaleWidth = 1558 / plan.width();
 	const scaleHeight = 936 / plan.height();
-	console.log(scaleWidth);
 
 	const points = [
-		{"x": 250, "y": 400, "title": "Parkplatz", "color": "white"},
-		{"x": 250, "y": 340, "title": "Pott", "color": "black"},
-		{"x": 560, "y": 430, "title": "Pool", "color": "white"}
+		{"x": 250, "y": 420, "title": "Parking", "color": "white", "icon": "bi-p-square-fill", "placement": "bottom"},
+		{"x": 250, "y": 355, "title": "Toilettes", "color": "black", "icon": "bi-badge-wc-fill", "placement": "top"},
+		{"x": 560, "y": 430, "title": "Piscine", "color": "white", "icon": "bi-geo-alt-fill", "placement": "top"},
+		{"x": 1070, "y": 40, "title": "D101 (route secondaire)", "color": "white", "icon": "bi-geo-alt-fill", "placement": "bottom"}
 	];
 
 	$.each(points, function(index, point) {
-		console.log(point["x"] / scaleWidth);
-		$("#tooltips").append(`<i class="bi bi-geo-alt-fill tooltip-button text-${point["color"]}" style="left: ${plan.offset()["left"] + point["x"] / scaleHeight}px;top: ${plan.offset()["top"] + point["y"] / scaleWidth}px;font-size: 1.7em;" data-bs-toggle="tooltip" data-bs-title="${point["title"]}"></i>`)
+		$("#tooltips").append(`<i class="bi ${point["icon"]} tooltip-button text-${point["color"]}" style="left: ${plan.offset()["left"] + point["x"] / scaleHeight}px;top: ${plan.offset()["top"] + point["y"] / scaleWidth}px;font-size: 1.7em;" data-bs-toggle="tooltip" data-bs-placement="${point["placement"]}" data-bs-title="${point["title"]}"></i>`)
 	});
 }

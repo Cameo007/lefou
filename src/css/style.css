@@ -74,6 +74,16 @@ video, #plan {
 .carousel-image {
 	width: 100%;
 }
+.carousel-caption {
+	text-shadow: 7px 7px 10px gray;
+}
+
+
+.card {
+	display: inline-block;
+	margin-top: 5px;
+}
+
 
 .hoverImage:hover {
 	transform: scale(1.2);

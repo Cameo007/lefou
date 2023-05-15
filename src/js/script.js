@@ -89,3 +89,11 @@ function planTooltip() {
 		$("#tooltips").append(`<i class="bi ${point["icon"]} tooltip-button text-${point["color"]}" style="left: ${plan.offset()["left"] + point["x"] / scaleHeight}px;top: ${plan.offset()["top"] + point["y"] / scaleWidth}px;font-size: 1.7em;" data-bs-toggle="tooltip" data-bs-placement="${point["placement"]}" data-bs-title="${point["title"]}"></i>`)
 	});
 }
+
+function randomReOrder() {
+	$.each(document.querySelectorAll("#cards-activities .card"), function(index, card) {
+		let insertIndex = Math.floor(Math.random() * document.querySelectorAll("#cards-activities .card").length);
+		card.remove();
+		$(card).insertAfter($(`.activity:nth-child(${insertIndex})`));
+	});
+}

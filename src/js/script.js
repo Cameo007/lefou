@@ -67,7 +67,7 @@ function changeColorMode(colorMode) {
 
 //Scrolling
 $(".collapse").each(function() {
-	$(this).on("shown.bs.collapse", function () {
+	$(this).on("shown.bs.collapse", function() {
 		this.scrollIntoView();
 	});
 });
@@ -94,6 +94,6 @@ function randomReOrder() {
 	$.each(document.querySelectorAll("#cards-activities .card"), function(index, card) {
 		let insertIndex = Math.floor(Math.random() * document.querySelectorAll("#cards-activities .card").length);
 		card.remove();
-		$(card).insertAfter($(`.activity:nth-child(${insertIndex})`));
+		$(card).insertAfter($(`.card-activity:nth-child(${insertIndex})`));
 	});
 }

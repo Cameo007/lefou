@@ -173,4 +173,8 @@ button.faq {
 	z-index: 2;
 	bottom: 65px;
 	right: 50px;
+	background-color: #3EB489;
+}
+#button-up, i {
+	color: #FFFF
 }

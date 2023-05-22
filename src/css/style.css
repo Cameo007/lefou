@@ -39,6 +39,14 @@ footer a {
 	text-align: center;
 }
 
+.scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.scroll.scrolled {
+  opacity: 1;
+}
+
 #title {
 	font-size: 600%;
 }

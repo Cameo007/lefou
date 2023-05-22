@@ -97,3 +97,7 @@ function randomReOrder() {
 		$(card).insertAfter($(`.card-activity:nth-child(${insertIndex})`));
 	});
 }
+
+function up() {
+	$('#title')[0].scrollIntoView();
+}

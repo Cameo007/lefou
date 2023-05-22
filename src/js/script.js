@@ -86,8 +86,17 @@ function planTooltip() {
 	];
 
 	$.each(points, function(index, point) {
-		$("#tooltips").append(`<i class="bi ${point["icon"]} tooltip-button text-${point["color"]}" style="left: ${plan.offset()["left"] + point["x"] / scaleHeight}px;top: ${plan.offset()["top"] + point["y"] / scaleWidth}px;font-size: 1.7em;" data-bs-toggle="tooltip" data-bs-placement="${point["placement"]}" data-bs-title="${point["title"]}"></i>`)
+		$("#tooltips").append(`<i class="bi ${point["icon"]} tooltip-button text-${point["color"]}" style="left: ${plan.offset()["left"] + point["x"] / scaleHeight}px;top: ${plan.offset()["top"] + point["y"] / scaleWidth}px;font-size: 1.7em;" data-bs-toggle="tooltip" data-bs-placement="${point["placement"]}" data-bs-title="${point["title"]}" onclick="toggleTooltip(this)"></i>`)
 	});
+}
+
+function toggleTooltip(element) {
+	let tooltip = bootstrap.Tooltip.getOrCreateInstance(element);
+	if (tooltip._activeTrigger.hover == false) {
+		tooltip.show()
+	} else {
+		tooltip.hide()
+	}
 }
 
 function randomReOrder() {

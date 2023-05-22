@@ -169,6 +169,8 @@ button.faq {
 }
 
 #button-up {
-	float: right;
-	margin: none 15px 15px none;
+	position: fixed;
+	z-index: 2;
+	bottom: 65px;
+	right: 50px
 }

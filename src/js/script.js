@@ -99,5 +99,5 @@ function randomReOrder() {
 }
 
 function up() {
-	$('#title')[0].scrollIntoView();
+	$('.navbar')[0].scrollIntoView();
 }

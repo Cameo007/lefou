@@ -170,4 +170,5 @@ button.faq {
 
 #button-up {
 	float: right;
+	margin: none 15px 15px none;
 }

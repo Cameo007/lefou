@@ -167,3 +167,7 @@ button.faq {
 #div-button-showSources {
 	text-align: center;
 }
+
+#button-up {
+	float: right;
+}

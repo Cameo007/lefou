@@ -78,12 +78,7 @@ function planTooltip() {
 	const scaleWidth = 1558 / plan.width();
 	const scaleHeight = 936 / plan.height();
 
-	const points = [
-		{"x": 250, "y": 420, "title": "Parking", "color": "white", "icon": "bi-p-square-fill", "placement": "bottom"},
-		{"x": 250, "y": 355, "title": "Toilettes", "color": "black", "icon": "bi-badge-wc-fill", "placement": "top"},
-		{"x": 560, "y": 430, "title": "Piscine", "color": "white", "icon": "bi-geo-alt-fill", "placement": "top"},
-		{"x": 1070, "y": 40, "title": "D101 (route secondaire)", "color": "white", "icon": "bi-geo-alt-fill", "placement": "bottom"}
-	];
+	const points = [];
 
 	$.each(points, function(index, point) {
 		$("#tooltips").append(`<i class="bi ${point["icon"]} tooltip-button text-${point["color"]}" style="left: ${plan.offset()["left"] + point["x"] / scaleHeight}px;top: ${plan.offset()["top"] + point["y"] / scaleWidth}px;font-size: 1.7em;" data-bs-toggle="tooltip" data-bs-placement="${point["placement"]}" data-bs-title="${point["title"]}" onclick="toggleTooltip(this)"></i>`)
